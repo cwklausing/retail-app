@@ -1,8 +1,5 @@
 import React from 'react';
 import { render } from 'react-dom';
-
-const MyComponent = () => {
-  return <div>Hello world</div>;
-};
+import MyComponent from './components/ClientApp';
 
 render(<MyComponent />, document.getElementById('app'));
