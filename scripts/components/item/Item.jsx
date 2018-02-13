@@ -1,6 +1,6 @@
 import React from 'react';
 import { object } from 'prop-types';
-import Carousel from '../carousel/carousel';
+import ImageSection from '../image-section/ImageSection';
 import { createCarouselArray } from '../../util/item-util.js';
 
 const Item = ({ item }) => {
@@ -9,7 +9,7 @@ const Item = ({ item }) => {
   return (
     <div className="single-product">
       <h1>{item.title}</h1>
-      <Carousel images={carouselArray} />
+      <ImageSection images={carouselArray} />
     </div>
   );
 };

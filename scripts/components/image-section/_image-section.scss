@@ -1,0 +1,37 @@
+.image-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 45%;
+}
+
+.carousel {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 300px;
+
+  &__image {
+    cursor: pointer;
+    width: 75px;
+    height: 75px;
+    &.active {
+      border: 1px solid black;
+      border-radius: 3px;
+    }
+  }
+
+  .arrow {
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    &.next {
+      transform: rotate(-45deg);
+    }
+    &.prev {
+      transform: rotate(135deg);
+    }
+  }
+}
