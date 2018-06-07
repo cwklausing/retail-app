@@ -13,8 +13,6 @@ class App extends Component {
   componentDidMount = () => this.getItemData();
 
   getItemData = () => {
-    // Get the item data. Currently doesn't handle errors.
-    // In the future, would want to set some kind of message in event of an error
     axios
       .get('/public/mock-data/item-data.json')
       .then(res => {

@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { arrayOf, string } from 'prop-types';
+import Carousel from '../carousel/Carousel';
 import './_image-section.scss';
 
 export default class ImageSection extends Component {
@@ -29,43 +30,11 @@ export default class ImageSection extends Component {
             <div className="primary-image">
               <img src={images[activeImageIndex]} />
             </div>
-            <div className="carousel">
-              {Boolean(images[activeImageIndex - 1]) ? (
-                <Fragment>
-                  <span
-                    className="arrow prev"
-                    onClick={() => this.changeActiveImage(activeImageIndex - 1)}
-                  />
-                  <img
-                    src={images[activeImageIndex - 1]}
-                    className="carousel__image"
-                    onClick={() => this.changeActiveImage(activeImageIndex - 1)}
-                  />
-                </Fragment>
-              ) : (
-                <div className="empty carousel__image" />
-              )}
-              <img
-                src={images[activeImageIndex]}
-                className="carousel__image active"
-              />
-              {Boolean(images[activeImageIndex + 1]) ? (
-                <Fragment>
-                  {' '}
-                  <img
-                    src={images[activeImageIndex + 1]}
-                    className="carousel__image"
-                    onClick={() => this.changeActiveImage(activeImageIndex + 1)}
-                  />
-                  <span
-                    className="arrow next"
-                    onClick={() => this.changeActiveImage(activeImageIndex + 1)}
-                  />
-                </Fragment>
-              ) : (
-                <div className="empty carousel__image" />
-              )}
-            </div>
+            <Carousel
+              images={images}
+              onClick={this.changeActiveImage}
+              activeImageIndex={activeImageIndex}
+            />
           </Fragment>
         )}
       </div>

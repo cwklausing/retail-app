@@ -14,5 +14,3 @@ export const createCarouselArray = item => {
   }
   return returnArray;
 };
-
-// export const createRatingsArray = () => {};

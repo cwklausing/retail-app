@@ -1,0 +1,22 @@
+.reviews {
+  .stars {
+    display: flex;
+    align-items: center;
+  }
+  .star {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    svg {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      margin-right: 2px;
+      fill: gray;
+      overflow: visible;
+    }
+    &.red svg {
+      fill: red;
+    }
+  }
+}
